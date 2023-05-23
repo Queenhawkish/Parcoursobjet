@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Parcours éléments</title>
+</head>
+
+<body>
+
+    <div id="header">
+    </div>
+    <div id="bloc">
+    </div>
+
+    
+
+    <script>
+        const data = [{
+            "squadName": "Super hero squad",
+            "homeTown": "Metro City",
+            "formed": 2016,
+            "secretBase": "Super tower",
+            "active": true,
+            "members": [
+                {
+                    "name": "Molecule Man",
+                    "age": 29,
+                    "secretIdentity": "Dan Jukes",
+                    "powers": [
+                        "Radiation resistance",
+                        "Turning tiny",
+                        "Radiation blast"
+                    ]
+                },
+                {
+                    "name": "Madame Uppercut",
+                    "age": 39,
+                    "secretIdentity": "Jane Wilson",
+                    "powers": [
+                        "Million tonne punch",
+                        "Damage resistance",
+                        "Superhuman reflexes"
+                    ]
+                },
+                {
+                    "name": "Eternal Flame",
+                    "age": 1000000,
+                    "secretIdentity": "Unknown",
+                    "powers": [
+                        "Immortality",
+                        "Heat Immunity",
+                        "Inferno",
+                        "Teleportation",
+                        "Interdimensional travel"
+                    ]
+                }
+            ]
+        }]
+
+        let powers = function(){
+            
+        }
+
+        data.forEach(element => {
+            header.innerHTML = `
+                <h1>${element.squadName}</h1>
+                <h2>Hometown: ${element.homeTown} // Formed: ${element.formed}</h2>
+            `;
+            element.members.forEach(member => {
+            let superpower = ""
+            member.powers.forEach(power => {
+                superpower += `
+                <li>${power}</li>
+                `
+            });
+            bloc.innerHTML += `
+                <div id="hero">
+                    <h3>${member.name}</h3>
+                    <ul>
+                        <li>Secret identity: ${member.secretIdentity}</li>
+                        <li>Age: ${member.age}</li>
+                        <li>Superpowers:
+                            <ul id="superpower">
+                                ${superpower}
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                `;
+            
+
+        });
+        });
+
+        
+    </script>
+</body>
+
+</html>

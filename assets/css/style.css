@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Faster+One&family=Press+Start+2P&family=Rubik+Pixels&display=swap');
+
+h1, h3{
+    font-family: 'Faster One', cursive;
+}
+
+h1{
+    font-size: 5em;
+    text-align: center;
+}
+
+h2{
+    font-size: 2em;
+    text-align: center;
+}
+
+h3{
+    font-size: 2em;
+}
+
+#bloc{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#hero{
+    display: flex;
+    flex-direction: column;
+}
